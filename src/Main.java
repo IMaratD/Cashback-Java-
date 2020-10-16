@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        double regularCosts = 1000.0;
-        double higherCashCosts = 1000.0;
-        double specialCosts = 1000.0;
+        double regularCosts = 100000.0;
+        double higherCashCosts = 100000.0;
+        double specialCosts = 100000.0;
         int regularCash = 1;
         int higherCash = 5;
         int specialCash = 30;
@@ -10,26 +10,15 @@ public class Main {
 
         double regularCashback = regularCosts * regularCash / 100.0;
 
-        if (regularCashback > limit) {
-
-            regularCashback = limit;
-        }
-
         double higherCashback = higherCashCosts * higherCash / 100.0;
-
-        if (higherCashback > limit) {
-
-            higherCashback = limit;
-        }
 
         double specialCashback = specialCosts * specialCash / 100.0;
 
-        if (specialCashback > limit) {
-
-            specialCashback = limit;
-        }
-
         double cashback = regularCashback + higherCashback + specialCashback;
+
+        if (cashback > limit) {
+            cashback = limit;
+        }
 
         System.out.println(cashback);
     }
